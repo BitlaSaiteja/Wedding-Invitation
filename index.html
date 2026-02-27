@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= BODY ================= */
+
+/* ================= INTRO SCREEN ================= */
+/* ================= INTRO SCREEN ================= */
+
+.intro-screen {
+    position: fixed;
+    inset: 0;
+   background: url("https://raw.githubusercontent.com/BitlaSaiteja/Wedding/main/Main.jpeg") 45% center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    overflow: hidden;
+    transition: opacity 1s ease;
+}
+
+/* Vintage overlay effect */
+/* Vintage cinematic overlay */
+/* Soft romantic vintage overlay */
+.intro-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at center, rgba(255,240,220,0.08), rgba(0,0,0,0.25)),
+        rgba(255,228,200,0.08);
+    backdrop-filter: sepia(25%) contrast(92%) brightness(96%);
+    z-index: 1;
+}
+
+/* Names styling */
+.intro-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 80px;
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: zoomIn 3s ease forwards;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 85px;
+    color: #ffd700;
+    text-shadow: 0 0 25px rgba(0,0,0,0.6);
+    animation: zoomIn 3s ease forwards;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+.intro-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shine 4s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+@keyframes zoomIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.love {
+    position: absolute;
+    width: 50px;
+    opacity: 0.1;
+    filter: brightness(1.1) saturate(0.8) blur(0.5px);
+    animation: floatUp 6s ease-in-out infinite;
+    z-index: 2;
+}
+/* Designer signature */
+/* Royal designer signature */
+.signature {
+    position: fixed;
+    bottom: 12px;
+    right: 20px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 18px;
+    font-style: italic;
+    background: linear-gradient(45deg, #b22222, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    opacity: 0.85;
+    text-shadow: 0 0 8px rgba(178,34,34,0.3);
+    z-index: 999;
+}
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.1);
+        opacity: 0;
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Background Layer */
+.bg {
+    position: fixed;
+    inset: 0;
+    background: url("https://raw.githubusercontent.com/BitlaSaiteja/Wedding/main/Main.jpeg") center/cover no-repeat fixed;
+    transition: filter 4s ease;
+    z-index: -3;
+}
+
+/* When blurred */
+.bg.blur {
+    filter: blur(6px) brightness(70%);
+}
+
+/* Light overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.10);
+    z-index: -2;
+}
+
+/* ================= FLORAL FRAME ================= */
+.invite-container {
+    width: 95%;
+    max-width: 1000px;
+    min-height: 90vh;
+    background: url("https://png.pngtree.com/png-clipart/20201208/original/pngtree-wedding-frame-with-watercolor-flowers-and-square-gold-border-png-image_5531504.jpg") no-repeat center;
+    background-size: 100% 100%;
+    padding: 120px 80px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Inner cream layer */
+.invite-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 250, 235, 0.85);
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 70px;
+    color: #b68b2d;
+    margin-bottom: 10px;
+    text-shadow: 0 0 18px rgba(182,139,45,0.6);
+}
+
+.subtitle {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.section {
+    margin: 40px 0;
+    animation: fadeUp 2s ease;
+}
+
+.highlight {
+    font-size: 26px;
+    font-weight: 600;
+    color: #b68b2d;
+    font-style: italic;
+}
+
+/* Icon styling */
+.icon-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+    font-size: 18px;
+}
+
+.icon-line img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(145deg, #d4af37, #f5e6b3);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.icon-line a {
+    text-decoration: none;
+    color: #6b4f1d;
+    transition: 0.3s;
+}
+
+.icon-line a:hover {
+    color: #b68b2d;
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #6b4f1d;
+    font-style: italic;
+}
+
+/* ================= PETALS ================= */
+
+.petal {
+    position: fixed;
+    top: -100px;
+    width: 35px;
+    pointer-events: none;
+    animation: fall linear infinite;
+    z-index: 1;
+}
+
+@keyframes fall {
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform:scale(0.97);}
+    to {opacity:1; transform:scale(1);}
+}
+
+@keyframes fadeUp {
+    from {opacity:0; transform:translateY(30px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+@media (max-width:768px){
+    .invite-container{
+        padding:80px 30px;
+    }
+    h1{
+        font-size:45px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+<div class="intro-screen" id="intro">
+    <div class="intro-text">Sharath 💞 Haritha</div>
+</div>
+<div class="bg" id="background"></div>
+<div class="overlay"></div>
+
+<div class="invite-container">
+    <div class="content">
+
+        <h1>Wedding Invitation</h1>
+
+        <div class="subtitle">
+            With Great Joy & Pride from the Groom’s Family
+        </div>
+
+        <div class="section">
+            <p style="font-style: italic;">
+                It is a proud and joyous moment for our family as our elder son
+                steps into a beautiful new chapter of life.
+            </p>
+
+            <p style="font-style: italic;">
+                Your gracious presence and blessings will make this celebration
+                truly memorable for us.
+            </p>
+
+            <p class="highlight">Wedding Ceremony</p>
+
+            <div class="icon-line">
+                <img src="https://img.freepik.com/free-psd/calendar-human-organs-3d-icon-illustration_56104-2859.jpg?semt=ais_user_personalization&w=740&q=80">
+                <span>05-03-2026 - 11:08 AM</span>
+            </div>
+
+            <div class="icon-line">
+                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/location-emoji-icon-svg-download-png-8936636.png">
+                <a href="https://www.google.com/maps/place/Srirasthu+Function+Hall+AC/@16.9027135,80.3793891,9796m/data=!3m1!1e3!4m6!3m5!1s0x3a35b73f0b79c571:0x958733348a0c235a!8m2!3d16.8997674!4d80.3848546!16s%2Fg%2F11c6v3pgsn?entry=ttu" target="_blank">
+                    Madira
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <p class="highlight">Reception</p>
+
+            <div class="icon-line">
+                <img src="https://img.freepik.com/free-psd/calendar-human-organs-3d-icon-illustration_56104-2859.jpg?semt=ais_user_personalization&w=740&q=80">
+                <span>07-03-2026 – 12:00 PM</span>
+            </div>
+
+            <div class="icon-line">
+                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/location-emoji-icon-svg-download-png-8936636.png">
+                <a href="https://www.google.com/maps/place/Mangalya+Convention+Hall/@17.7101796,79.1447334,2378m/data=!3m1!1e3!4m6!3m5!1s0x3bcb590047c2fbb9:0x419f74fc1847091f!8m2!3d17.710641!4d79.1485924!16s%2Fg%2F11lykwxh0l?entry=ttu" target="_blank">
+                    Jangaon
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            🙏 THANK YOU 🙏 <br>
+            With Love from the Groom’s Family 🤍
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+/* Auto blur after 1 second */
+/* Floating love emojis in intro */
+/* Floating romantic hearts in intro */
+for (let i = 0; i < 30; i++) {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.classList.add("love");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+    document.getElementById("intro").appendChild(heart);
+}
+/* Hide intro after 3.5 seconds */
+setTimeout(() => {
+    document.getElementById("intro").style.opacity = "0";
+    setTimeout(() => {
+        document.getElementById("intro").style.display = "none";
+    }, 1000);
+}, 3500);
+setTimeout(() => {
+    document.getElementById("background").classList.add("blur");
+}, 1000);
+
+/* Petals */
+const petalImage = "https://png.pngtree.com/png-clipart/20210502/original/pngtree-pink-petals-flower-cute-cartoon-cherry-blossom-png-image_6266193.png";
+
+for (let i = 0; i < 30; i++) {
+    let petal = document.createElement("img");
+    petal.src = petalImage;
+    petal.classList.add("petal");
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (8 + Math.random() * 8) + "s";
+    petal.style.opacity = Math.random();
+    document.body.appendChild(petal);
+}
+
+</script>
+<div class="signature">Designed by Teja</div>
+</body>
+</html>
